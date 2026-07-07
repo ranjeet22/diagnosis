@@ -1595,6 +1595,23 @@ export const WorkspacePage: React.FC = () => {
                     </div>
                   </div>
                 )}
+
+                {/* Theme color selector for mobile screens */}
+                <div className="lg:hidden space-y-2 text-left pt-2.5 border-t border-slate-200/60 dark:border-slate-800">
+                  <p className="text-[9px] text-textSecondary font-bold uppercase tracking-wider px-2">Theme Color</p>
+                  <div className="flex items-center space-x-2 px-2">
+                    {(['blue', 'emerald', 'violet', 'indigo', 'amber', 'rose'] as const).map(color => (
+                      <button
+                        key={color}
+                        onClick={() => setPrimaryColor(color)}
+                        style={{
+                          backgroundColor: color === 'blue' ? '#3b82f6' : color === 'emerald' ? '#10b981' : color === 'violet' ? '#8b5cf6' : color === 'indigo' ? '#6366f1' : color === 'amber' ? '#f59e0b' : '#f43f5e'
+                        }}
+                        className={`w-5 h-5 rounded-full border-2 ${primaryColor === color ? 'border-slate-800 dark:border-slate-100 scale-110 shadow-sm' : 'border-transparent'} transition-transform focus:outline-none`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
 
               <div className="pt-4 border-t border-slate-200/60 dark:border-slate-800">
