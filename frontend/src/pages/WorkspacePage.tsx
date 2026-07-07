@@ -28,6 +28,7 @@ import {
   Search,
   ArrowLeft,
   X,
+  Menu,
   FileText,
   Clock,
   HeartPulse,
@@ -67,6 +68,7 @@ export const WorkspacePage: React.FC = () => {
   // Navigation & Menu tabs
   const [currentStep, setCurrentStep] = useState<'upload' | 'processing' | 'summary' | 'workspace'>('upload');
   const [activeMenu, setActiveMenu] = useState<'dashboard' | 'explorer' | 'builder' | 'insights' | 'chat' | 'export' | 'settings'>('dashboard');
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   
   // Theme & Preferences State
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -1141,6 +1143,15 @@ export const WorkspacePage: React.FC = () => {
       {/* Top Header navbar */}
       <header className={`border-b ${isDarkMode ? 'border-slate-800 bg-slate-900/90' : 'border-slate-200/60 bg-white/90'} sticky top-0 z-40 backdrop-blur-md px-6 py-4 flex items-center justify-between`}>
         <div className="flex items-center space-x-3">
+          {currentStep === 'workspace' && (
+            <button
+              onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
+              className="lg:hidden p-1.5 text-textPrimary hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors focus:outline-none"
+              title="Toggle Menu"
+            >
+              {mobileSidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          )}
           <Link to="/" onClick={handleResetWorkspace} className="flex items-center space-x-2 focus:outline-none">
             <img src={BrandmarkLogo} alt="Diagnōsis logo" className="h-7 w-7 object-contain" />
             <span className="font-extrabold text-base tracking-tight text-textPrimary">
@@ -1148,7 +1159,7 @@ export const WorkspacePage: React.FC = () => {
             </span>
           </Link>
           {datasetId && (
-            <div className="flex items-center space-x-2 pl-4 border-l border-slate-300/60 text-xs">
+            <div className="hidden sm:flex items-center space-x-2 pl-4 border-l border-slate-300/60 text-xs">
               <span className="font-semibold text-textSecondary uppercase tracking-wider">Active Cohort:</span>
               <Badge variant="primary" className="font-mono">{filePreview?.name || 'dataset.csv'}</Badge>
             </div>
@@ -1157,7 +1168,7 @@ export const WorkspacePage: React.FC = () => {
 
         {/* Global theme controls & actions */}
         <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-1.5">
+          <div className="hidden md:flex items-center space-x-1.5">
             <span className="text-xs text-textSecondary pr-1">Theme Color:</span>
             {(['blue', 'emerald', 'violet', 'indigo', 'amber', 'rose'] as const).map(color => (
               <button
@@ -1498,7 +1509,11 @@ export const WorkspacePage: React.FC = () => {
           <section className="flex-grow flex">
             
             {/* Sidebar Switcher Panel */}
-            <aside className={`w-64 border-r ${isDarkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-200 bg-white'} shrink-0 flex flex-col justify-between p-4`}>
+            <aside 
+              className={`fixed lg:relative inset-y-0 left-0 z-50 w-64 border-r ${isDarkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-200 bg-white'} shrink-0 flex flex-col justify-between p-4 transform ${
+                mobileSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+              } lg:translate-x-0 transition-transform duration-300 ease-in-out`}
+            >
               <div className="space-y-6">
                 
                 {/* Active user status info */}
@@ -1525,7 +1540,10 @@ export const WorkspacePage: React.FC = () => {
                   ].map((tab) => (
                     <button
                       key={tab.id}
-                      onClick={() => setActiveMenu(tab.id as any)}
+                      onClick={() => {
+                        setActiveMenu(tab.id as any);
+                        setMobileSidebarOpen(false);
+                      }}
                       className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-xs font-semibold focus:outline-none transition-colors ${
                         activeMenu === tab.id
                           ? 'bg-primary text-white shadow-md'
@@ -1552,7 +1570,13 @@ export const WorkspacePage: React.FC = () => {
                               : 'bg-slate-50/50 border-slate-150 text-textSecondary hover:bg-slate-100/50'
                           }`}
                         >
-                          <div className="truncate flex-grow" onClick={() => handleSwitchDataset(item)}>
+                          <div
+                            className="truncate flex-grow"
+                            onClick={() => {
+                              handleSwitchDataset(item);
+                              setMobileSidebarOpen(false);
+                            }}
+                          >
                             <p className="font-bold truncate">{item.name}</p>
                             <p className="text-[8px] text-textSecondary mt-0.5">{item.rows} rows • {item.qualityScore}% Health</p>
                           </div>
@@ -1573,11 +1597,27 @@ export const WorkspacePage: React.FC = () => {
               </div>
 
               <div className="pt-4 border-t border-slate-200/60 dark:border-slate-800">
-                <Button variant="outline" size="sm" onClick={handleResetWorkspace} className="w-full justify-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    handleResetWorkspace();
+                    setMobileSidebarOpen(false);
+                  }}
+                  className="w-full justify-center"
+                >
                   <ArrowLeft className="mr-1 w-3.5 h-3.5" /> Reset Workspace
                 </Button>
               </div>
             </aside>
+
+            {/* Mobile Sidebar backdrop */}
+            {mobileSidebarOpen && (
+              <div 
+                onClick={() => setMobileSidebarOpen(false)} 
+                className="fixed inset-0 z-40 bg-slate-900/40 backdrop-blur-sm lg:hidden"
+              />
+            )}
 
             {/* Console Screen Panel */}
             <div className="flex-grow flex flex-col min-w-0 overflow-y-auto p-8 relative">
@@ -1709,8 +1749,8 @@ export const WorkspacePage: React.FC = () => {
                             return (
                               <div
                                 key={widget.id}
-                                style={{ gridColumn: isFullscreen ? 'span 12' : `span ${desktopSpan}` }}
-                                className={`transition-all duration-300 ${
+                                style={{ '--widget-span': isFullscreen ? '12' : `${desktopSpan}` } as React.CSSProperties}
+                                className={`col-span-custom transition-all duration-300 ${
                                   isFullscreen 
                                     ? 'fixed inset-4 z-50 bg-white dark:bg-slate-900 border border-slate-200 p-8 shadow-2xl rounded-3xl flex flex-col justify-between' 
                                     : ''

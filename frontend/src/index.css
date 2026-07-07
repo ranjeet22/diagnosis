@@ -70,3 +70,14 @@ html.lenis {
 .lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Responsive Grid Span Utilities */
+.col-span-custom {
+  grid-column: span 1 / span 1;
+}
+
+@media (min-width: 768px) {
+  .col-span-custom {
+    grid-column: span var(--widget-span) / span var(--widget-span);
+  }
+}
