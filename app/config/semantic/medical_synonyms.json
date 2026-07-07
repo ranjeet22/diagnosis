@@ -1,0 +1,20 @@
+{
+  "suffixes": {
+    "DATE_OF_BIRTH": ["_dob", "_birth_date", "_birthdate", "birthdate"],
+    "ADMISSION_DATE": ["_admission", "_admitted", "_visit_date", "_admission_date", "visit_date"],
+    "DISCHARGE_DATE": ["_discharge", "_released", "_discharge_date", "discharged"],
+    "BLOOD_PRESSURE": ["_bp", "_pressure", "_systolic", "_diastolic", "pressure"],
+    "HEART_RATE": ["_pulse", "_hr", "_bpm", "_heartrate", "pulse"],
+    "WEIGHT": ["_weight", "_mass", "_wt", "weight"],
+    "HEIGHT": ["_height", "_ht", "height"],
+    "TEMPERATURE": ["_temp", "_temperature", "temp"]
+  },
+  "datatype_fallbacks": {
+    "DATE": "Timestamp",
+    "DATETIME": "Timestamp",
+    "TIME": "Timestamp",
+    "INTEGER": "Measurement",
+    "FLOAT": "Measurement",
+    "BOOLEAN": "Binary Value"
+  }
+}

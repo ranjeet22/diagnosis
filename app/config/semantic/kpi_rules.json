@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Total Records",
+    "description": "Total number of clinical database records or encounters registered.",
+    "formula": "Row Count",
+    "concept_trigger": null,
+    "aggregation_type": "count",
+    "priority": "high",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Total Patients",
+    "description": "Total count of unique patient identifiers registered in the dataset.",
+    "formula": "Distinct Count of Patient_ID",
+    "concept_trigger": "PATIENT_ID",
+    "aggregation_type": "distinct_count",
+    "priority": "high",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Unique Diagnoses",
+    "description": "Count of distinct medical conditions/diagnoses treated.",
+    "formula": "Distinct Count of Diagnosis",
+    "concept_trigger": "DISEASE",
+    "aggregation_type": "distinct_count",
+    "priority": "high",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Most Common Diagnosis",
+    "description": "The disease category with the highest incidence caseload.",
+    "formula": "Mode of Diagnosis",
+    "concept_trigger": "DISEASE",
+    "aggregation_type": "mode",
+    "priority": "medium",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Average Patient Age",
+    "description": "The arithmetic mean age of the patient cohort.",
+    "formula": "Mean of Age",
+    "concept_trigger": "AGE",
+    "aggregation_type": "average",
+    "priority": "high",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Recovery Rate",
+    "description": "Percentage of patients with recovery outcome status.",
+    "formula": "(Count of 'recovered' outcomes / Total outcomes) * 100",
+    "concept_trigger": "OUTCOME",
+    "aggregation_type": "percentage",
+    "priority": "high",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Mortality Rate",
+    "description": "Percentage of patient cases resulting in mortality.",
+    "formula": "(Count of 'mortality' outcomes / Total outcomes) * 100",
+    "concept_trigger": "OUTCOME",
+    "aggregation_type": "percentage",
+    "priority": "high",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Facility Count",
+    "description": "Number of distinct clinics or hospital providers reporting data.",
+    "formula": "Distinct Count of Hospital",
+    "concept_trigger": "HOSPITAL",
+    "aggregation_type": "distinct_count",
+    "priority": "medium",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Reporting Regions",
+    "description": "Total unique geographical zipcodes or regions mapped.",
+    "formula": "Distinct Count of Location",
+    "concept_trigger": "LOCATION",
+    "aggregation_type": "distinct_count",
+    "priority": "medium",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Average Hospital Stay",
+    "description": "Average duration of stay in days for hospitalized patients.",
+    "formula": "Mean of (Discharge_Date - Admission_Date)",
+    "concept_trigger": "DISCHARGE_DATE",
+    "additional_triggers": ["ADMISSION_DATE"],
+    "aggregation_type": "average",
+    "priority": "high",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Average BMI",
+    "description": "Average Body Mass Index across the patient profile.",
+    "formula": "Mean of BMI",
+    "concept_trigger": "BMI",
+    "aggregation_type": "average",
+    "priority": "low",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Total Admissions",
+    "description": "Total number of admissions recorded over the timeframe.",
+    "formula": "Count of Admission_Date",
+    "concept_trigger": "ADMISSION_DATE",
+    "aggregation_type": "count",
+    "priority": "medium",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Total Discharges",
+    "description": "Total number of successful discharge releases recorded.",
+    "formula": "Count of Discharge_Date",
+    "concept_trigger": "DISCHARGE_DATE",
+    "aggregation_type": "count",
+    "priority": "low",
+    "dashboard_placement": "Overview"
+  },
+  {
+    "name": "Dataset Completeness",
+    "description": "Percentage of non-null cells across the entire dataset matrix.",
+    "formula": "100 - (Total Missing Values / Total Cells) * 100",
+    "concept_trigger": null,
+    "aggregation_type": "percentage",
+    "priority": "high",
+    "dashboard_placement": "Data Quality"
+  },
+  {
+    "name": "Data Quality Score",
+    "description": "Composite data health rating score (0 to 100).",
+    "formula": "Calculated Quality Score Metric",
+    "concept_trigger": null,
+    "aggregation_type": "score",
+    "priority": "high",
+    "dashboard_placement": "Data Quality"
+  }
+]

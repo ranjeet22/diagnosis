@@ -1,0 +1,132 @@
+{
+  "tasks": {
+    "disease_distribution": {
+      "chart_family": "Bar",
+      "purpose": "Compare patient volumes across different clinical diagnoses.",
+      "aggregation": "count",
+      "priority": "high",
+      "recommended_size": "half",
+      "recommended_position": "top-right",
+      "interaction_type": "interactive"
+    },
+    "top_diseases": {
+      "chart_family": "Bar",
+      "purpose": "Compare patient volumes across different clinical diagnoses.",
+      "aggregation": "count",
+      "priority": "high",
+      "recommended_size": "half",
+      "recommended_position": "top-right",
+      "interaction_type": "interactive"
+    },
+    "age_histogram": {
+      "chart_family": "Histogram",
+      "purpose": "Visualize demographic age bracket distribution.",
+      "aggregation": "count",
+      "priority": "medium",
+      "recommended_size": "half",
+      "recommended_position": "middle-left",
+      "interaction_type": "interactive"
+    },
+    "age_groups": {
+      "chart_family": "Bar",
+      "purpose": "Compare patient cohort counts grouped by life stage bins.",
+      "aggregation": "count",
+      "priority": "high",
+      "recommended_size": "half",
+      "recommended_position": "middle-right",
+      "interaction_type": "interactive"
+    },
+    "gender_distribution": {
+      "chart_family": "Pie",
+      "purpose": "Show proportion shares across categories.",
+      "aggregation": "count",
+      "priority": "high",
+      "recommended_size": "third",
+      "recommended_position": "top-left",
+      "interaction_type": "interactive"
+    },
+    "outcome_distribution": {
+      "chart_family": "Pie",
+      "purpose": "Show proportion shares across categories.",
+      "aggregation": "count",
+      "priority": "high",
+      "recommended_size": "third",
+      "recommended_position": "top-left",
+      "interaction_type": "interactive"
+    },
+    "severity_distribution": {
+      "chart_family": "Bar",
+      "purpose": "Represent patient counts per triage acuity level.",
+      "aggregation": "count",
+      "priority": "high",
+      "recommended_size": "half",
+      "recommended_position": "middle-left",
+      "interaction_type": "interactive"
+    },
+    "location_distribution": {
+      "chart_family": "Bar",
+      "purpose": "Compare caseload volume by patient geographical zipcode/location.",
+      "aggregation": "count",
+      "priority": "medium",
+      "recommended_size": "half",
+      "recommended_position": "bottom-left",
+      "interaction_type": "interactive"
+    },
+    "regional_comparison": {
+      "chart_family": "Bar",
+      "purpose": "Compare caseload volume by patient geographical zipcode/location.",
+      "aggregation": "count",
+      "priority": "medium",
+      "recommended_size": "half",
+      "recommended_position": "bottom-left",
+      "interaction_type": "interactive"
+    },
+    "heatmap_candidate": {
+      "chart_family": "Heatmap",
+      "purpose": "Examine geographical density spikes and concentrations.",
+      "aggregation": "count",
+      "priority": "medium",
+      "recommended_size": "half",
+      "recommended_position": "bottom-right",
+      "interaction_type": "interactive"
+    }
+  },
+  "trend_default": {
+    "chart_family": "Line",
+    "purpose": "Analyze admissions timeline variations, seasonalities, and trends.",
+    "aggregation": "count",
+    "priority": "high",
+    "recommended_size": "full",
+    "recommended_position": "middle-center",
+    "interaction_type": "interactive"
+  },
+  "comparisons": {
+    "categorical_vs_numeric": {
+      "chart_family": "Box Plot",
+      "purpose": "Analyze numerical statistics grouped by categories.",
+      "aggregation": "distribution",
+      "priority": "high",
+      "recommended_size": "half",
+      "recommended_position": "bottom-center",
+      "interaction_type": "interactive"
+    },
+    "categorical_vs_categorical": {
+      "chart_family": "Bar",
+      "purpose": "Cross-tabulate category count ratios.",
+      "aggregation": "count",
+      "priority": "high",
+      "recommended_size": "half",
+      "recommended_position": "bottom-center",
+      "interaction_type": "interactive"
+    },
+    "temporal_vs_categorical": {
+      "chart_family": "Line",
+      "purpose": "Examine daily counts of categories over time.",
+      "aggregation": "count",
+      "priority": "medium",
+      "recommended_size": "full",
+      "recommended_position": "bottom-center",
+      "interaction_type": "interactive"
+    }
+  }
+}

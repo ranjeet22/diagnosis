@@ -1,0 +1,254 @@
+{
+  "DISEASE": [
+    {
+      "task_id": "disease_distribution",
+      "name": "Disease Distribution",
+      "description": "Calculates the overall prevalence and count of each diagnosis in the dataset.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 15
+    },
+    {
+      "task_id": "disease_frequency",
+      "name": "Disease Frequency",
+      "description": "Tabulates diagnosis frequency counts.",
+      "business_value": "medium",
+      "visualization_importance": "medium",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    },
+    {
+      "task_id": "top_diseases",
+      "name": "Top Diseases",
+      "description": "Identifies the top 5 most frequent diagnoses.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    },
+    {
+      "task_id": "disease_ranking",
+      "name": "Disease Ranking",
+      "description": "Ranks diagnoses based on caseload size.",
+      "business_value": "medium",
+      "visualization_importance": "low",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    }
+  ],
+  "AGE": [
+    {
+      "task_id": "age_histogram",
+      "name": "Age Histogram",
+      "description": "Bins patient ages into statistical intervals to show age distribution.",
+      "business_value": "medium",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 15
+    },
+    {
+      "task_id": "age_groups",
+      "name": "Age Groups Distribution",
+      "description": "Groups patients into demographic age cohorts (e.g. pediatric, adult, geriatric).",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 20
+    },
+    {
+      "task_id": "average_age",
+      "name": "Average Age",
+      "description": "Calculates the arithmetic average age of the patients cohort.",
+      "business_value": "medium",
+      "visualization_importance": "low",
+      "computation_cost": "low",
+      "expected_runtime_ms": 5
+    },
+    {
+      "task_id": "median_age",
+      "name": "Median Age",
+      "description": "Calculates the median age of the patients cohort.",
+      "business_value": "medium",
+      "visualization_importance": "low",
+      "computation_cost": "low",
+      "expected_runtime_ms": 5
+    },
+    {
+      "task_id": "age_distribution",
+      "name": "Age Distribution Analysis",
+      "description": "Analyzes the overall spread, skewness, and variance of patient age.",
+      "business_value": "low",
+      "visualization_importance": "medium",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    }
+  ],
+  "GENDER": [
+    {
+      "task_id": "gender_distribution",
+      "name": "Gender Distribution",
+      "description": "Calculates percentage and count breakdown of patient gender demographics.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    }
+  ],
+  "ADMISSION_DATE": [
+    {
+      "task_id": "daily_admission_trend",
+      "name": "Daily Admission Trend",
+      "description": "Plots chronological daily patient admission counts.",
+      "business_value": "medium",
+      "visualization_importance": "medium",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 25
+    },
+    {
+      "task_id": "weekly_admission_trend",
+      "name": "Weekly Admission Trend",
+      "description": "Aggregates admission frequencies into weekly intervals.",
+      "business_value": "medium",
+      "visualization_importance": "medium",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 20
+    },
+    {
+      "task_id": "monthly_admission_trend",
+      "name": "Monthly Admission Trend",
+      "description": "Analyzes monthly patient admissions to capture macro trends and seasonality.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 20
+    },
+    {
+      "task_id": "quarterly_admission_trend",
+      "name": "Quarterly Admission Trend",
+      "description": "Tracks quarterly workload spikes and metrics.",
+      "business_value": "medium",
+      "visualization_importance": "low",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 20
+    },
+    {
+      "task_id": "yearly_admission_trend",
+      "name": "Yearly Admission Trend",
+      "description": "Compares year-over-year overall admissions volume.",
+      "business_value": "medium",
+      "visualization_importance": "low",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 15
+    },
+    {
+      "task_id": "admission_moving_average",
+      "name": "Admissions Moving Average",
+      "description": "Applies a 7-day rolling window average to smooth out daily noise in admissions.",
+      "business_value": "medium",
+      "visualization_importance": "medium",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 30
+    },
+    {
+      "task_id": "admission_growth_rate",
+      "name": "Admissions Growth Rate",
+      "description": "Calculates week-over-week or month-over-month growth rate percentage in admissions.",
+      "business_value": "high",
+      "visualization_importance": "medium",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 35
+    }
+  ],
+  "LOCATION": [
+    {
+      "task_id": "location_distribution",
+      "name": "Location Distribution",
+      "description": "Groups counts of patients by geographical location/zipcode.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 15
+    },
+    {
+      "task_id": "regional_comparison",
+      "name": "Regional Comparison",
+      "description": "Compares health metrics and volume across patient regions.",
+      "business_value": "medium",
+      "visualization_importance": "medium",
+      "computation_cost": "low",
+      "expected_runtime_ms": 15
+    },
+    {
+      "task_id": "heatmap_candidate",
+      "name": "Geographical Heatmap Candidate",
+      "description": "Prepares coordinate mapping inputs for geographical heatmaps.",
+      "business_value": "medium",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 20
+    }
+  ],
+  "OUTCOME": [
+    {
+      "task_id": "recovery_rate",
+      "name": "Recovery Rate",
+      "description": "Computes the percentage of patients successfully discharged or recovered.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    },
+    {
+      "task_id": "mortality_rate",
+      "name": "Mortality Rate",
+      "description": "Computes the percentage of patient mortality cases registered.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    },
+    {
+      "task_id": "outcome_distribution",
+      "name": "Outcome Distribution",
+      "description": "Tabulates counts and ratios of all clinical outcomes.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    }
+  ],
+  "SEVERITY": [
+    {
+      "task_id": "severity_distribution",
+      "name": "Severity Distribution",
+      "description": "Plots the caseload distribution across clinical triage severity levels.",
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "low",
+      "expected_runtime_ms": 10
+    }
+  ],
+  "conditional": [
+    {
+      "task_id": "disease_trend",
+      "name": "Disease Trend",
+      "description": "Tracks specific diagnosis incidence trends over time.",
+      "required_concepts": ["DISEASE", "ADMISSION_DATE"],
+      "business_value": "high",
+      "visualization_importance": "high",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 40
+    },
+    {
+      "task_id": "severity_trend",
+      "name": "Severity Trend",
+      "description": "Tracks high-acuity caseload ratios chronologically.",
+      "required_concepts": ["SEVERITY", "ADMISSION_DATE"],
+      "business_value": "medium",
+      "visualization_importance": "medium",
+      "computation_cost": "medium",
+      "expected_runtime_ms": 25
+    }
+  ]
+}

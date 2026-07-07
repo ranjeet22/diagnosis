@@ -1,0 +1,155 @@
+{
+  "PATIENT_ID": {
+    "entity_group": "Patient",
+    "medical_category": "Demographic",
+    "expected_units": null,
+    "nullable_recommendation": {
+      "allowed": false,
+      "imputation_strategy": "drop"
+    }
+  },
+  "DISEASE": {
+    "entity_group": "Clinical Outcome",
+    "medical_category": "Diagnostic",
+    "expected_units": null,
+    "nullable_recommendation": {
+      "allowed": false,
+      "imputation_strategy": "drop"
+    }
+  },
+  "AGE": {
+    "entity_group": "Patient",
+    "medical_category": "Demographic",
+    "expected_units": "years",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "median"
+    }
+  },
+  "GENDER": {
+    "entity_group": "Patient",
+    "medical_category": "Demographic",
+    "expected_units": null,
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mode"
+    }
+  },
+  "DATE_OF_BIRTH": {
+    "entity_group": "Patient",
+    "medical_category": "Demographic",
+    "expected_units": "date",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "drop"
+    }
+  },
+  "ADMISSION_DATE": {
+    "entity_group": "Encounter",
+    "medical_category": "Administrative",
+    "expected_units": "date",
+    "nullable_recommendation": {
+      "allowed": false,
+      "imputation_strategy": "drop"
+    }
+  },
+  "DISCHARGE_DATE": {
+    "entity_group": "Encounter",
+    "medical_category": "Administrative",
+    "expected_units": "date",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "drop"
+    }
+  },
+  "OUTCOME": {
+    "entity_group": "Clinical Outcome",
+    "medical_category": "Outcome",
+    "expected_units": null,
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mode"
+    }
+  },
+  "SEVERITY": {
+    "entity_group": "Encounter",
+    "medical_category": "Diagnostic",
+    "expected_units": null,
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mode"
+    }
+  },
+  "HOSPITAL": {
+    "entity_group": "Encounter",
+    "medical_category": "Administrative",
+    "expected_units": null,
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mode"
+    }
+  },
+  "LOCATION": {
+    "entity_group": "Patient",
+    "medical_category": "Demographic",
+    "expected_units": null,
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mode"
+    }
+  },
+  "BLOOD_PRESSURE": {
+    "entity_group": "Clinical Measurement",
+    "medical_category": "Vitals",
+    "expected_units": "mmHg",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mean"
+    }
+  },
+  "HEART_RATE": {
+    "entity_group": "Clinical Measurement",
+    "medical_category": "Vitals",
+    "expected_units": "bpm",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mean"
+    }
+  },
+  "WEIGHT": {
+    "entity_group": "Clinical Measurement",
+    "medical_category": "Demographic",
+    "expected_units": "kg",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "median"
+    }
+  },
+  "HEIGHT": {
+    "entity_group": "Clinical Measurement",
+    "medical_category": "Demographic",
+    "expected_units": "cm",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "median"
+    }
+  },
+  "BMI": {
+    "entity_group": "Clinical Measurement",
+    "medical_category": "Demographic",
+    "expected_units": "kg/m2",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "median"
+    }
+  },
+  "TEMPERATURE": {
+    "entity_group": "Clinical Measurement",
+    "medical_category": "Vitals",
+    "expected_units": "celsius",
+    "nullable_recommendation": {
+      "allowed": true,
+      "imputation_strategy": "mean"
+    }
+  }
+}

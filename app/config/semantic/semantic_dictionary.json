@@ -1,0 +1,19 @@
+{
+  "PATIENT_ID": ["patient_id", "patient_id_code", "id", "patient_key", "mrn", "patient_id_number"],
+  "DISEASE": ["diagnosis", "disease", "disease_name", "condition", "icd10", "icd11", "icd_code", "diagnosis_name", "pathology", "disease_concept"],
+  "AGE": ["age", "patient_age", "years", "age_in_years", "patient_age_years", "age_years"],
+  "GENDER": ["sex", "gender", "patient_gender", "patient_sex", "sex_assigned_at_birth"],
+  "DATE_OF_BIRTH": ["dob", "birth_date", "date_of_birth", "birthdate", "patient_dob"],
+  "ADMISSION_DATE": ["admission_date", "hospitalized_on", "visit_date", "admission_day", "admitted_at", "hospital_admission_date", "admission_time"],
+  "DISCHARGE_DATE": ["discharge_date", "released_on", "discharged_at", "discharge_day", "hospital_discharge_date", "discharge_time"],
+  "OUTCOME": ["outcome", "status", "recovery_status", "clinical_outcome", "disposition", "discharge_status", "patient_outcome"],
+  "SEVERITY": ["severity", "risk_level", "condition_level", "triage_level", "severity_level", "acuity"],
+  "HOSPITAL": ["hospital", "clinic", "medical_center", "facility", "provider", "hospital_name", "clinic_name"],
+  "LOCATION": ["region", "state", "district", "city", "county", "location", "address", "zipcode", "zip"],
+  "BLOOD_PRESSURE": ["blood_pressure", "bp", "systolic_bp", "diastolic_bp", "systolic", "diastolic", "blood_pressure_systolic", "blood_pressure_diastolic"],
+  "HEART_RATE": ["heart_rate", "pulse", "bpm", "hr", "pulse_rate"],
+  "WEIGHT": ["weight", "mass", "weight_kg", "weight_lbs", "patient_weight"],
+  "HEIGHT": ["height", "height_cm", "height_in", "patient_height"],
+  "BMI": ["bmi", "body_mass_index"],
+  "TEMPERATURE": ["temperature", "body_temperature", "temp", "temp_c", "temp_f"]
+}

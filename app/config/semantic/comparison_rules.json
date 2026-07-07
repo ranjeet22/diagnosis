@@ -1,0 +1,62 @@
+[
+  {
+    "concept_a": "DISEASE",
+    "concept_b": "AGE",
+    "name": "Disease vs Age",
+    "comparison_type": "categorical_vs_numeric"
+  },
+  {
+    "concept_a": "DISEASE",
+    "concept_b": "GENDER",
+    "name": "Disease vs Gender",
+    "comparison_type": "categorical_vs_categorical"
+  },
+  {
+    "concept_a": "DISEASE",
+    "concept_b": "LOCATION",
+    "name": "Disease vs Location",
+    "comparison_type": "categorical_vs_categorical"
+  },
+  {
+    "concept_a": "DISEASE",
+    "concept_b": "OUTCOME",
+    "name": "Disease vs Outcome",
+    "comparison_type": "categorical_vs_categorical"
+  },
+  {
+    "concept_a": "HOSPITAL",
+    "concept_b": "OUTCOME",
+    "name": "Hospital vs Outcome",
+    "comparison_type": "categorical_vs_categorical"
+  },
+  {
+    "concept_a": "HOSPITAL",
+    "concept_b": "DISEASE",
+    "name": "Hospital vs Disease",
+    "comparison_type": "categorical_vs_categorical"
+  },
+  {
+    "concept_a": "AGE",
+    "concept_b": "OUTCOME",
+    "name": "Age vs Outcome",
+    "comparison_type": "numeric_vs_categorical"
+  },
+  {
+    "concept_a": "SEVERITY",
+    "concept_b": "OUTCOME",
+    "name": "Severity vs Outcome",
+    "comparison_type": "categorical_vs_categorical"
+  },
+  {
+    "concept_a": "LOCATION",
+    "concept_b": "DISEASE",
+    "name": "Region vs Disease",
+    "comparison_type": "categorical_vs_categorical"
+  },
+  {
+    "concept_a": "ADMISSION_DATE",
+    "concept_b": "DISEASE",
+    "name": "Date vs Disease",
+    "comparison_type": "temporal_vs_categorical"
+  }
+]

@@ -1,0 +1,3 @@
+"""
+Diagnōsis Test Suite.
+"""

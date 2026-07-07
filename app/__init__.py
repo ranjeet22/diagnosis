@@ -1,0 +1,3 @@
+"""
+Diagnōsis Core Application Package.
+"""

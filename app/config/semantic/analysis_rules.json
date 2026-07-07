@@ -1,0 +1,87 @@
+{
+  "PATIENT_ID": {
+    "expected_analysis": ["unique patient count", "retention cohort"],
+    "suggested_visualizations": ["Table", "Card"],
+    "allowed_aggregations": ["count"]
+  },
+  "DISEASE": {
+    "expected_analysis": ["distribution", "trend", "severity comparison", "outcome association"],
+    "suggested_visualizations": ["Bar", "Pie", "Treemap"],
+    "allowed_aggregations": ["count", "mode"]
+  },
+  "AGE": {
+    "expected_analysis": ["distribution", "age grouping", "average metrics comparison", "demographic correlation"],
+    "suggested_visualizations": ["Histogram", "Box Plot", "Density Plot"],
+    "allowed_aggregations": ["mean", "median", "min", "max", "std_dev"]
+  },
+  "GENDER": {
+    "expected_analysis": ["gender breakdown", "demographic outcome split", "admission rate comparison"],
+    "suggested_visualizations": ["Pie", "Bar", "Donut"],
+    "allowed_aggregations": ["count", "mode"]
+  },
+  "DATE_OF_BIRTH": {
+    "expected_analysis": ["age derivation", "cohort breakdown", "birth year trend"],
+    "suggested_visualizations": ["Line", "Histogram"],
+    "allowed_aggregations": ["min", "max"]
+  },
+  "ADMISSION_DATE": {
+    "expected_analysis": ["daily admission trend", "weekly admissions", "monthly seasonality", "seasonal comparison"],
+    "suggested_visualizations": ["Line", "Area", "Heatmap"],
+    "allowed_aggregations": ["count", "min", "max"]
+  },
+  "DISCHARGE_DATE": {
+    "expected_analysis": ["discharge trend", "seasonality comparison", "stay duration correlation"],
+    "suggested_visualizations": ["Line", "Area"],
+    "allowed_aggregations": ["count", "min", "max"]
+  },
+  "OUTCOME": {
+    "expected_analysis": ["outcome breakdown", "outcome distribution", "mortality rate analysis", "recovery metrics"],
+    "suggested_visualizations": ["Bar", "Pie", "Donut"],
+    "allowed_aggregations": ["count", "mode"]
+  },
+  "SEVERITY": {
+    "expected_analysis": ["risk distribution", "severity comparison", "triage outcome correlation"],
+    "suggested_visualizations": ["Bar", "Pie", "Radar"],
+    "allowed_aggregations": ["count", "mode"]
+  },
+  "HOSPITAL": {
+    "expected_analysis": ["hospital comparison", "facility load analysis", "admission breakdown by site"],
+    "suggested_visualizations": ["Bar", "Pie"],
+    "allowed_aggregations": ["count", "mode"]
+  },
+  "LOCATION": {
+    "expected_analysis": ["geographical distribution", "regional outcomes split", "location comparisons"],
+    "suggested_visualizations": ["Map", "Bar", "Heatmap"],
+    "allowed_aggregations": ["count", "mode"]
+  },
+  "BLOOD_PRESSURE": {
+    "expected_analysis": ["distribution", "correlation with age/bmi", "trend over encounters", "vitals outlier analysis"],
+    "suggested_visualizations": ["Scatter", "Box Plot", "Line"],
+    "allowed_aggregations": ["mean", "median", "min", "max"]
+  },
+  "HEART_RATE": {
+    "expected_analysis": ["pulse distribution", "vitals stability evaluation", "patient profile metrics"],
+    "suggested_visualizations": ["Scatter", "Box Plot", "Line"],
+    "allowed_aggregations": ["mean", "median", "min", "max"]
+  },
+  "WEIGHT": {
+    "expected_analysis": ["demographic distribution", "clinical measurement profiles", "vital statistics correlation"],
+    "suggested_visualizations": ["Histogram", "Box Plot", "Scatter"],
+    "allowed_aggregations": ["mean", "median", "min", "max"]
+  },
+  "HEIGHT": {
+    "expected_analysis": ["demographic distribution", "physical characteristics profiles"],
+    "suggested_visualizations": ["Histogram", "Box Plot", "Scatter"],
+    "allowed_aggregations": ["mean", "median", "min", "max"]
+  },
+  "BMI": {
+    "expected_analysis": ["obesity classification distribution", "correlation with outcomes", "demographic metrics comparison"],
+    "suggested_visualizations": ["Histogram", "Box Plot", "Scatter"],
+    "allowed_aggregations": ["mean", "median", "min", "max"]
+  },
+  "TEMPERATURE": {
+    "expected_analysis": ["fever prevalence distribution", "vitals trend profiles"],
+    "suggested_visualizations": ["Scatter", "Box Plot", "Line"],
+    "allowed_aggregations": ["mean", "median", "min", "max"]
+  }
+}

@@ -1,0 +1,19 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/workspace/app
+      - ./storage:/workspace/storage
+      - ./logs:/workspace/logs
+    environment:
+      - APP_ENV=development
+      - LOG_LEVEL=debug
+      - STORAGE_TYPE=local
+      - STORAGE_LOCAL_DIR=/workspace/storage/uploads
+    env_file:
+      - .env
+    restart: always
