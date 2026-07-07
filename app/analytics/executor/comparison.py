@@ -1,6 +1,6 @@
 import os
 import json
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import pandas as pd
 from app.schemas.plan import ComparisonPlan
 from app.schemas.results import ComparisonResult
