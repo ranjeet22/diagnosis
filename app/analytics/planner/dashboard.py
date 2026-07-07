@@ -1,5 +1,6 @@
 from typing import List, Dict, Any
 from app.schemas.plan import DashboardSection, KPIPlan, AnalysisTask
+from app.schemas.semantic import SemanticModel
 
 
 class DashboardPlanner:
