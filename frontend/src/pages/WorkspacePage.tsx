@@ -103,6 +103,7 @@ export const WorkspacePage: React.FC = () => {
   const [datasetHistory, setDatasetHistory] = useState<DatasetHistoryItem[]>([]);
 
   // Backend Data cache hooks
+  // @ts-ignore
   const [datasetMetadata, setDatasetMetadata] = useState<any>(null);
   const [datasetProfile, setDatasetProfile] = useState<any>(null);
   const [semanticModel, setSemanticModel] = useState<any>(null);
@@ -1627,14 +1628,14 @@ export const WorkspacePage: React.FC = () => {
                 <div className="space-y-8 text-left">
                   
                   {/* Dynamic filters top panel */}
-                  <div className="flex justify-between items-center bg-white border border-slate-200 p-4 rounded-2xl shadow-sm">
+                  <div className="flex flex-col md:flex-row justify-between md:items-center items-start gap-4 bg-white border border-slate-200 p-4 rounded-2xl shadow-sm">
                     <div>
                       <Badge variant="primary" className="mb-1">Composed Config</Badge>
                       <h2 className="text-3xl font-extrabold text-textPrimary tracking-tight">Platform Cohort Analytics</h2>
                     </div>
 
                     {/* Highly stylized global filters dropdown */}
-                    <div className="flex items-center space-x-4">
+                    <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
                       {['Gender', 'Medical Condition', 'Hospital'].map((colName) => {
                         const colKey = colName.toLowerCase().replace(' ', '_');
                         const isSearchOpen = activeFilterColumn === colName;
@@ -2531,14 +2532,7 @@ export const WorkspacePage: React.FC = () => {
                         </select>
                       </div>
 
-                      {datasetMetadata && (
-                        <div className="pt-2 text-[10px] text-textSecondary font-mono leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-150">
-                          <p className="font-bold uppercase tracking-wider text-[9px] mb-1 text-slate-800">Dataset Metadata Parameter logs</p>
-                          <p>Storage Path: {datasetMetadata.storage_path}</p>
-                          <p>Delimiter: "{datasetMetadata.delimiter}" • Target Encoding: {datasetMetadata.encoding}</p>
-                          <p>Calculations timestamp: {new Date(datasetMetadata.upload_timestamp).toLocaleString()}</p>
-                        </div>
-                      )}
+
 
                     </div>
                   </Card>
