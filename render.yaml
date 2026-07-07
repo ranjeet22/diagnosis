@@ -1,0 +1,31 @@
+services:
+  # 1. FastAPI Backend API Service
+  - type: web
+    name: diagnosis-backend-api
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
+      - key: STORAGE_TYPE
+        value: local
+      - key: STORAGE_LOCAL_DIR
+        value: /workspace/storage/uploads
+      - key: GEMINI_API_KEY
+        sync: false # Render will prompt you to enter your Gemini Key during setup
+
+  # 2. Vite React Static Frontend Site
+  - type: static
+    name: diagnosis-frontend-app
+    env: static
+    rootDir: frontend
+    buildCommand: npm run build
+    publishDir: dist
+    routes:
+      # SPA fallback routing
+      - type: rewrite
+        source: /*
+        destination: /index.html
